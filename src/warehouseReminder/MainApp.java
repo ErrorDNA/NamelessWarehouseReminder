@@ -18,7 +18,7 @@ public class MainApp extends Application {
 	public void start(Stage primaryStage) {
 		
 		this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("AddressApp");
+        this.primaryStage.setTitle("Напоминалка о необходимости уничтожения безымянных полуфабрикатов");
 
         initRootLayout();
 
