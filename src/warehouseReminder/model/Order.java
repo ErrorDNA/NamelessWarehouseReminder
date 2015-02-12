@@ -29,7 +29,7 @@ public class Order {
      * Default constructor.
      */
     public Order() {
-        this(null, null);
+        this(null, null, null, null, null, null);
     }
     
     /**
@@ -74,6 +74,54 @@ public class Order {
 
     public StringProperty orderNameProperty() {
         return orderName;
+    }
+    
+    public LocalDate getAddDate() {
+        return addDate.get();
+    }
+
+    public void setAddDate(LocalDate addDate) {
+        this.addDate.set(addDate);
+    }
+
+    public ObjectProperty<LocalDate> orderAddDateProperty() {
+        return addDate;
+    }
+    
+    public LocalDate getDellDate() {
+        return dellDate.get();
+    }
+
+    public void setDellDate(LocalDate dellDate) {
+        this.dellDate.set(dellDate);
+    }
+
+    public ObjectProperty<LocalDate> orderDellDateProperty() {
+        return addDate;
+    }
+    
+    public Integer getOrderDefectCount() {
+        return orderNumber.get();
+    }
+
+    public void setOrderDefectCount(Integer orderDefectCount) {
+        this.orderDefectCount.set(orderDefectCount);
+    }
+
+    public IntegerProperty orderDefectCountProperty() {
+        return orderDefectCount;
+    }
+    
+    public String getOrderNote() {
+        return orderNote.get();
+    }
+
+    public void setOrderNote(String orderNote) {
+        this.orderNote.set(orderNote);
+    }
+
+    public StringProperty orderNoteProperty() {
+        return orderNote;
     }
 
 }

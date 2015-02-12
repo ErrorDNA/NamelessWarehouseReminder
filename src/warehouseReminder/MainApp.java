@@ -1,8 +1,12 @@
 package warehouseReminder;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
+import warehouseReminder.model.Order;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -14,6 +18,26 @@ public class MainApp extends Application {
 	private Stage primaryStage;
     private BorderPane rootLayout;
 	
+    private ObservableList<Order> orderData = FXCollections.observableArrayList();
+
+    /**
+     * Constructor
+     */
+    public MainApp() {
+        // Add some sample data
+        orderData.add(new Order(123456, "义耱1", LocalDate.parse("2015-02-11 00:00:00"), LocalDate.parse("2015-02-11 00:00:00"), 200, "义耱1"));
+        //orderData.add(new Order(200000, "义耱2", 31/10/01, 31,10,02, 200, "义耱2" ));
+        //orderData.add(new Order(500000, "义耱3", 31/10/01, 31,10,02, 200, "义耱3" ));
+    }
+
+    /**
+     * Returns the data as an observable list of Persons. 
+     * @return
+     */
+    public ObservableList<Order> getOrderData() {
+        return orderData;
+    }
+    
 	@Override
 	public void start(Stage primaryStage) {
 		
